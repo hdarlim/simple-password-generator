@@ -1,0 +1,19 @@
+# Compiled Binaries
+*.exe
+*.out
+*.app
+generator
+password_gen
+
+# Object Files
+*.o
+*.obj
+
+# IDE Folders
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
