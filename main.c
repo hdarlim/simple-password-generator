@@ -5,7 +5,6 @@
 int main() {
     // initialize variables
     int size = 0;
-    int temp = 0;
     char abc_upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char abc_lower[] = "abcdefghijklmnopqrstuvwxyz";
     char numbers[] = "0123456789";
@@ -32,7 +31,7 @@ int main() {
 
     // draw a number to generate each character of the password; after the loop, guarantees the password ends with '\0'
     for (int i = 4; i < size; i++) {
-        temp = rand() % 4;
+        int temp = rand() % 4;
         switch (temp)
         {
         case 0:
@@ -53,7 +52,15 @@ int main() {
     }
     password[size] = '\0';
 
-    // print final password
+    // change the order of the chosen characters
+    for (int i = 0; i < size - 1; i++) {
+        int j = rand() % (size - 1);
+        char aux = password[i];
+        password[i] = password[j];
+        password[j] = aux;
+    }
+
+    // prints final password
     printf("%s\n", password);
 
     return 0;
