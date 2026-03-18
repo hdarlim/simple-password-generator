@@ -53,8 +53,8 @@ int main() {
     password[size] = '\0';
 
     // change the order of the chosen characters
-    for (int i = 0; i < size - 1; i++) {
-        int j = rand() % (size - 1);
+    for (int i = 0; i < size; i++) {
+        int j = rand() % size;
         char aux = password[i];
         password[i] = password[j];
         password[j] = aux;
