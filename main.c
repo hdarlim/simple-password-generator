@@ -24,9 +24,9 @@ int main() {
 
     char password[size + 1];
 
-    password[0] = abc_upper[rand() % 26];    
-    password[1] = abc_lower[rand() % 26];    
-    password[2] = numbers[rand() % 10];    
+    password[0] = abc_upper[rand() % 26];
+    password[1] = abc_lower[rand() % 26];
+    password[2] = numbers[rand() % 10];
     password[3] = symbols[rand() % 21];
 
     // draw a number to generate each character of the password; after the loop, guarantees the password ends with '\0'
@@ -61,7 +61,7 @@ int main() {
     }
 
     // prints final password
-    printf("%s\n", password);
+    printf("Your password is: %s\n", password);
 
     return 0;
 }
